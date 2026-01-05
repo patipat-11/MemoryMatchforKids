@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match - ผักสำหรับเด็ก</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>เกมจับคู่ภาพ: ผักแสนอร่อย!</h1>
+        <p>คุณมีเวลา 60 วินาทีในการจับคู่ทั้งหมด!</p>
+
+        <div class="scoreboard">
+            <div class="time-box">
+                เวลา: <span id="timer">60</span> วินาที
+            </div>
+            <div class="score-box">
+                คะแนน: <span id="score">0</span>
+            </div>
+            <div class="moves-box">
+                จำนวนครั้ง: <span id="moves">0</span>
+            </div>
+        </div>
+        
+        <div id="game-board" class="game-board">
+            </div>
+
+        <button id="restart-button" onclick="startGame()">เริ่มเกมใหม่</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>เกมจบแล้ว!</h2>
+            <p id="modal-message"></p>
+            <button onclick="startGame()">เล่นอีกครั้ง</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
